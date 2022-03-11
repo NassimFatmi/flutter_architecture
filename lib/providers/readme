@@ -1,0 +1,26 @@
+# Desc
+
+This folder is for providers ( equivalent to ViewModel )
+
+- Contain the states
+- Consume the services
+
+Exemple: (With provider)
+
+class AuthProvider with ChangeNotifier {
+
+User? user;
+
+    User get user => _user;
+
+    Future login (String email, String password) async {
+      final AuthService authService = AuthService();
+      final user = await authService.login(email,password);
+      if(user != null) {
+        this.user = user;
+        ...
+      }
+      ...
+    }
+
+}

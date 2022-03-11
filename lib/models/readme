@@ -1,0 +1,15 @@
+# Desc
+
+This folder contains the models
+  
+  Exemple: 
+  class User {
+    String id;
+    String name;
+    ...
+
+    // Constructor
+    const User ();
+
+    factory fromJson (json) { ... }
+  }

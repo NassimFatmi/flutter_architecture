@@ -1,0 +1,22 @@
+# Desc
+
+Consume the API (Classes techniques)
+Localstorage
+...
+
+Exemple: 
+
+  class AuthService {
+    ...
+    Future<User?> login (String email, String password) async {
+      final response = await http.post(
+        dotenv.get('API_URL'),
+        headers: { ... }
+        body: {
+          email,
+          password,
+        }
+      );
+      ...
+    }
+  }
