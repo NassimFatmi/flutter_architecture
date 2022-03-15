@@ -1,6 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:mvvm/models/post_model.dart';
-import 'package:mvvm/services/posts_service.dart';
+import '../models/services/posts_service.dart';
 
 class PostsProvider with ChangeNotifier {
   // our state

@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:mvvm/widgets/widgets.dart';
 import '../home/home_screen.dart';
+import '../../widgets.dart';
 
 class Login extends StatelessWidget {
   static const route = "/login";

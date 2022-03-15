@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import '../../views/views.dart';
+import '../../views/screens.dart';
 
 class Routes {
   static final Map<String, Widget Function(BuildContext)> routes = {

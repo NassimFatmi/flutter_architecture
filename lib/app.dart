@@ -3,7 +3,6 @@ import 'package:mvvm/providers/posts_provider.dart';
 import 'package:provider/provider.dart';
 import 'config/routes/routes.dart';
 import 'config/theme/theme.dart';
-import 'views/auth/login_screen.dart';
 
 class MVVMApp extends StatelessWidget {
   const MVVMApp({Key? key}) : super(key: key);
