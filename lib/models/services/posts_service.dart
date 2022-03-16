@@ -1,8 +1,10 @@
 import 'dart:io';
 
 import 'package:flutter_dotenv/flutter_dotenv.dart';
-import 'package:mvvm/models/post_model.dart';
 import 'package:http/http.dart' as http;
+
+import '../errors/failure.dart';
+import '../post_model.dart';
 
 class PostService {
   Future<List<Post>> getPosts() async {
@@ -13,12 +15,15 @@ class PostService {
         return postFromJson(response.body);
       }
       return [];
+    } on SocketException {
+      throw Failure('No Internet connection 😑');
     } on HttpException {
-      print("No internet connection");
-      return [];
+      throw Failure("Couldn't find the post 😱");
+    } on FormatException {
+      throw Failure("Bad response format 👎");
     } catch (e) {
       print(e);
-      rethrow;
+      throw Failure(e.toString());
     }
   }
 }

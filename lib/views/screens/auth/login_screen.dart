@@ -11,8 +11,8 @@ class Login extends StatelessWidget {
     return Scaffold(
       body: Center(
         child: GacelaButton(
-            onPressed: () {
-              Navigator.pushNamed(context, Home.route);
+            onPressed: () async {
+              await Navigator.pushNamed(context, Home.route);
             },
             child: const Text("Login")),
       ),
